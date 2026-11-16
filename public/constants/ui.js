@@ -1,0 +1,17 @@
+export const ICONS = Object.freeze({
+  ACCOUNT_LOGOUT: "box-arrow-right",
+  BAG: "bag",
+  BOX_SEAM: "box-seam",
+  CART_PLUS: "cart-plus",
+  CHECK: "check-lg",
+  CLOCK_HISTORY: "clock-history",
+  ERROR: "exclamation-circle",
+  GEAR: "gear",
+  IMAGE: "image",
+  PENCIL: "pencil",
+  PERSON: "person",
+  PLUS: "plus-lg",
+  RECEIPT: "receipt",
+  SEARCH: "search",
+  TRASH: "trash",
+});

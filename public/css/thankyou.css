@@ -1,0 +1,80 @@
+/* Estilos de la página de confirmación. */
+
+.thankyou-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.thankyou-card {
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-7) var(--space-6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* ICONO */
+
+.thankyou-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  border-radius: 50%;
+}
+
+.thankyou-icon i {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* TEXTO */
+
+.thankyou-tag {
+  margin-bottom: var(--space-3);
+
+  color: var(--color-accent-text);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.thankyou-card h1 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+}
+
+.thankyou-card p {
+  max-width: 360px;
+  margin-bottom: var(--space-5);
+
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+/* BOTÓN */
+
+.thankyou-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}

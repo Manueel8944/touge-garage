@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Touge Garage — Piezas JDM y tuning</title>
+    <meta
+      name="description"
+      content="Piezas de tuning JDM: escapes, suspensión, frenos, llantas y más para tu coche japonés."
+    />
+
+    <link rel="icon" href="../assets/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Chakra+Petch:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Orden: Bootstrap → iconos → globales → página -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modals.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <a
+      class="visually-hidden-focusable btn btn-light position-absolute m-2 z-3"
+      href="#contenido"
+      >Saltar al contenido</a
+    >
+
+    <!-- HEADER -->
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand site-header"
+        data-bs-theme="dark"
+        aria-label="Principal"
+      >
+        <div class="container">
+          <a class="navbar-brand logo me-0" href="index.html">
+            <img
+              class="logo-img"
+              src="../assets/logo-nav.png"
+              alt="Touge Garage, inicio"
+              height="70"
+            />
+          </a>
+
+          <div class="d-flex align-items-center gap-1 ms-auto order-3">
+            <button
+              class="icon-btn"
+              id="user-btn"
+              type="button"
+              aria-label="Iniciar sesión"
+            >
+              <i class="bi bi-person" aria-hidden="true"></i>
+            </button>
+            <button
+              class="icon-btn"
+              id="cart-btn"
+              type="button"
+              aria-label="Carrito, 0 artículos"
+            >
+              <i class="bi bi-cart3" aria-hidden="true"></i>
+              <span class="icon-btn-badge" id="cart-count" hidden>0</span>
+            </button>
+          </div>
+
+          <div class="navbar-collapse order-2">
+            <ul class="navbar-nav mx-auto gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html" aria-current="page"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- PRIMERA PANTALLA (HERO + PRECIOS) -->
+      <div class="first-screen">
+        <section class="hero">
+          <div class="container">
+            <div class="row align-items-center g-5">
+              <div class="col-6">
+                <h1 class="hero-title">
+                  Piezas JDM para coches que se conducen de verdad
+                </h1>
+                <p class="hero-text mt-3">
+                  Escapes, suspensión, frenos y llantas para Skyline, Supra,
+                  Civic, MX-5 y más. Encuentra lo que encaja con tu coche.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                  <a class="btn btn-primary" href="catalog.html"
+                    >Ver catálogo</a
+                  >
+                  <a class="btn btn-ghost" href="contact.html"
+                    >Pedir asesoramiento</a
+                  >
+                </div>
+              </div>
+              <div class="col-6 order-last">
+                <figure class="hero-media">
+                  <!-- Imagen principal: 1200×900 aprox. -->
+                  <img
+                    src="../assets/hero.jpg"
+                    alt="Nissan Skyline azul en un puerto de montaña"
+                    width="1200"
+                    height="900"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COMPRA POR PRECIO -->
+        <section class="first-bar">
+          <div class="container">
+            <div class="prices">
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <h2 class="prices-title">Compra por precio</h2>
+                  <p class="prices-text">Elige tu presupuesto</p>
+                </div>
+                <div class="col">
+                  <div class="row row-cols-4 g-2">
+                    <div class="col">
+                      <a
+                        class="btn btn-ghost w-100"
+                        href="catalog.html?precio_max=100"
+                        >Hasta 100 €</a
+                      >
+                    </div>
+                    <div class="col">
+                      <a
+                        class="btn btn-ghost w-100"
+                        href="catalog.html?precio_min=100&amp;precio_max=300"
+                        >100 – 300 €</a
+                      >
+                    </div>
+                    <div class="col">
+                      <a
+                        class="btn btn-ghost w-100"
+                        href="catalog.html?precio_min=300&amp;precio_max=600"
+                        >300 – 600 €</a
+                      >
+                    </div>
+                    <div class="col">
+                      <a
+                        class="btn btn-ghost w-100"
+                        href="catalog.html?precio_min=600"
+                        >Más de 600 €</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CATEGORÍAS -->
+      <section class="section">
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-2 mb-4"
+          >
+            <h2 class="section-title">Compra por categoría</h2>
+            <a class="section-link" href="catalog.html">Ver todo el catálogo</a>
+          </div>
+          <ul class="categories">
+            <li class="categories-item">
+              <a href="catalog.html?cat=escapes">
+                <div>
+                  <span class="categories-name">Escapes</span>
+                  <p class="categories-desc">
+                    Líneas completas, downpipes y silenciadores
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html?cat=suspension">
+                <div>
+                  <span class="categories-name">Suspensión</span>
+                  <p class="categories-desc">
+                    Coilovers, muelles, barras estabilizadoras
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html?cat=motor">
+                <div>
+                  <span class="categories-name">Motor y turbo</span>
+                  <p class="categories-desc">
+                    Admisiones, intercoolers, turbos y gestión
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html?cat=frenos">
+                <div>
+                  <span class="categories-name">Frenos</span>
+                  <p class="categories-desc">
+                    Discos, pastillas, latiguillos y kits big brake
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html?cat=llantas">
+                <div>
+                  <span class="categories-name">Llantas y neumáticos</span>
+                  <p class="categories-desc">
+                    Forjadas, fundidas, separadores y tornillería
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html?cat=interior">
+                <div>
+                  <span class="categories-name">Interior y exterior</span>
+                  <p class="categories-desc">
+                    Baquets, volantes, aerodinámica y faros
+                  </p>
+                </div>
+                <span class="categories-count">Ver piezas</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section">
+        <div class="container">
+          <div class="cta row align-items-center g-4 mx-0">
+            <div class="col">
+              <h2 class="cta-title">
+                ¿No sabes qué pieza encaja con tu coche?
+              </h2>
+              <p class="cta-text">
+                Dinos modelo, año y lo que quieres mejorar. Te recomendamos
+                opciones compatibles.
+              </p>
+            </div>
+            <div class="col-auto">
+              <a class="btn btn-primary" href="contact.html">Escribir ahora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-4 text-start">
+            <a class="logo" href="index.html">
+              <img
+                class="logo-img logo-img-footer"
+                src="../assets/logo-footer.png"
+                alt="Touge Garage, inicio"
+                height="90"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div class="col-4 text-center">
+            <p class="footer-copy mb-0">
+              © 2026 Touge Garage. Todos los derechos reservados.
+            </p>
+          </div>
+          <div class="col-4">
+            <ul
+              class="footer-social d-flex justify-content-end gap-1 mb-0"
+              aria-label="Redes sociales"
+            >
+              <li>
+                <a class="icon-btn" href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a class="icon-btn" href="#" aria-label="YouTube"
+                  ><i class="bi bi-youtube" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a class="icon-btn" href="#" aria-label="TikTok"
+                  ><i class="bi bi-tiktok" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a class="icon-btn" href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/cart.js"></script>
+  </body>
+</html>

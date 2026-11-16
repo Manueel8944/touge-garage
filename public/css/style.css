@@ -1,0 +1,354 @@
+/* Estilos globales y tema de Bootstrap. */
+
+:root {
+  /* Colores base */
+  --color-bg: #0e1218;
+  --color-surface: #161c25;
+  --color-surface-2: #1e2632;
+  --color-border: #2b3544;
+
+  /* Texto */
+  --color-text: #eef1f5;
+  --color-text-muted: #a3aebd;
+
+  /* Acentos: azul Bayside (R34) + rojo del sol naciente */
+  --color-accent: #2a5fea;
+  --color-accent-rgb: 42, 95, 234;
+  --color-accent-hover: #3b70fb;
+  --color-accent-text: #7ea6ff; /* azul legible como texto sobre fondo oscuro */
+  --color-on-accent: #ffffff;
+  --color-sun: #e5322d;
+
+  /* Estados */
+  --color-success: #91a889;
+  --color-success-rgb: 145, 168, 137;
+  --color-success-bg: rgba(var(--color-success-rgb), 0.12);
+  --color-success-border: rgba(var(--color-success-rgb), 0.3);
+  --color-danger: #c98278;
+  --color-danger-rgb: 201, 130, 120;
+  --color-danger-bg: rgba(var(--color-danger-rgb), 0.12);
+  --color-danger-border: rgba(var(--color-danger-rgb), 0.3);
+
+  /* Tipografía */
+  --font-display: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 2rem;
+  --text-2xl: 3.25rem;
+  --text-hero: 5rem;
+
+  /* Espaciado propio (además de las utilidades de Bootstrap) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 5rem;
+  --space-9: 7rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --header-h: 72px; /* logo 70px + 1px de borde */
+  --transition: 150ms ease;
+}
+
+/* CONEXIÓN CON BOOTSTRAP (TEMA OSCURO) */
+:root,
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--color-bg);
+  --bs-body-color: var(--color-text);
+  --bs-body-font-family: var(--font-body);
+  --bs-body-font-size: var(--text-base);
+  --bs-secondary-color: var(--color-text-muted);
+  --bs-border-color: var(--color-border);
+  --bs-tertiary-bg: var(--color-surface);
+  --bs-secondary-bg: var(--color-surface-2);
+  --bs-primary: var(--color-accent);
+  --bs-primary-rgb: var(--color-accent-rgb);
+  --bs-success: var(--color-success);
+  --bs-success-rgb: var(--color-success-rgb);
+  --bs-success-text-emphasis: var(--color-success);
+  --bs-success-bg-subtle: var(--color-success-bg);
+  --bs-success-border-subtle: var(--color-success-border);
+  --bs-danger: var(--color-danger);
+  --bs-danger-rgb: var(--color-danger-rgb);
+  --bs-danger-text-emphasis: var(--color-danger);
+  --bs-danger-bg-subtle: var(--color-danger-bg);
+  --bs-danger-border-subtle: var(--color-danger-border);
+  --bs-link-color: var(--color-accent-text);
+  --bs-link-hover-color: #ffffff;
+  --bs-border-radius: var(--radius-sm);
+  --bs-border-radius-lg: var(--radius-md);
+  --bs-focus-ring-color: rgba(var(--color-accent-rgb), 0.5);
+}
+
+html {
+  scroll-padding-top: var(--header-h);
+}
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* BOTONES (BOOTSTRAP + TUS COLORES) */
+.btn {
+  --bs-btn-font-family: var(--font-display);
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: var(--text-sm);
+  --bs-btn-padding-x: 1.4rem;
+  --bs-btn-padding-y: 0.8rem;
+  --bs-btn-border-radius: var(--radius-sm);
+}
+.btn-primary {
+  --bs-btn-color: var(--color-on-accent);
+  --bs-btn-bg: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-on-accent);
+  --bs-btn-hover-bg: var(--color-accent-hover);
+  --bs-btn-hover-border-color: var(--color-accent-hover);
+  --bs-btn-active-color: var(--color-on-accent);
+  --bs-btn-active-bg: var(--color-accent-hover);
+  --bs-btn-active-border-color: var(--color-accent-hover);
+  --bs-btn-focus-shadow-rgb: var(--color-accent-rgb);
+}
+.btn-ghost {
+  --bs-btn-color: var(--color-text);
+  --bs-btn-border-color: var(--color-border);
+  --bs-btn-hover-color: var(--color-text);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: var(--color-text);
+  --bs-btn-active-color: var(--color-text);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: var(--color-text);
+}
+
+/* TARJETAS Y FORMULARIOS */
+.card {
+  --bs-card-bg: var(--color-surface);
+  --bs-card-border-color: var(--color-border);
+  --bs-card-border-radius: var(--radius-md);
+  --bs-card-inner-border-radius: var(--radius-md);
+}
+.form-select,
+.form-control {
+  background-color: var(--color-bg);
+}
+.form-label {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* MODALES Y MENÚS DESPLEGABLES */
+.modal {
+  --bs-modal-bg: var(--color-surface);
+  --bs-modal-border-color: var(--color-border);
+  --bs-modal-border-radius: var(--radius-md);
+  --bs-modal-header-border-color: var(--color-border);
+}
+.dropdown-menu {
+  --bs-dropdown-bg: var(--color-surface);
+  --bs-dropdown-border-color: var(--color-border);
+  --bs-dropdown-link-hover-bg: var(--color-surface-2);
+  --bs-dropdown-link-active-bg: var(--color-accent);
+  --bs-dropdown-header-color: var(--color-text-muted);
+  --bs-dropdown-divider-bg: var(--color-border);
+  min-width: 14rem;
+}
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--color-accent);
+}
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--color-border);
+}
+
+.toast-success {
+  --bs-toast-color: var(--color-success);
+  --bs-toast-bg: var(--color-surface);
+  --bs-toast-border-color: var(--color-success);
+}
+.toast-danger {
+  --bs-toast-color: var(--color-danger);
+  --bs-toast-bg: var(--color-surface);
+  --bs-toast-border-color: var(--color-danger);
+}
+
+/* HEADER / NAVBAR */
+.site-header {
+  --bs-navbar-color: var(--color-text-muted);
+  --bs-navbar-hover-color: var(--color-text);
+  --bs-navbar-active-color: var(--color-text);
+  --bs-navbar-padding-y: 0;
+  min-height: var(--header-h);
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}
+.logo:hover {
+  color: var(--color-text);
+}
+.logo-img {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+.logo-img-footer {
+  height: 90px;
+}
+
+.site-header .nav-link {
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.site-header .nav-link.active {
+  border-bottom-color: var(--color-accent);
+}
+.icon-btn {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.icon-btn:hover,
+.icon-btn:focus,
+.icon-btn:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--color-accent-text);
+}
+
+.icon-btn:focus-visible {
+  outline: none;
+}
+
+.icon-btn .bi {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.icon-btn-badge {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--color-sun);
+  color: #fff;
+  border-radius: 9px;
+}
+.user-avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.user-avatar img,
+.account-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account-avatar {
+  position: relative;
+}
+
+/* Permite cortar textos largos dentro de elementos flex */
+.min-w-0 {
+  min-width: 0;
+}
+.admin-thumb {
+  display: block;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+}
+/* FOOTER */
+.site-footer {
+  margin-top: var(--space-8);
+  padding-block: var(--space-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+.footer-copy {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+.footer-social {
+  padding: 0;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

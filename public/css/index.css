@@ -1,0 +1,134 @@
+/* Estilos de la página principal. */
+
+.section {
+  padding-top: var(--space-8);
+}
+.section-title {
+  font-size: var(--text-2xl);
+  margin: 0;
+}
+.section-link {
+  color: var(--color-accent-text);
+  font-weight: 600;
+}
+.section-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* HERO */
+/* Hero + ventajas ocupan justo la primera pantalla; las categorías empiezan ya fuera de vista */
+.first-screen {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-6);
+}
+.hero > .container {
+  width: 100%;
+}
+.hero-title {
+  font-size: var(--text-hero);
+  max-width: 12ch;
+}
+.hero-text {
+  max-width: 46ch;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+.hero-media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%, 0 14%);
+  overflow: hidden;
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* COMPRA POR PRECIO */
+.first-bar {
+  padding-block: var(--space-4) var(--space-6);
+}
+.prices {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+}
+.prices-title {
+  font-size: var(--text-lg);
+  margin: 0;
+}
+.prices-text {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* CATEGORÍAS (LISTA CON LÍNEAS) */
+.categories {
+  border-top: 1px solid var(--color-border);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.categories-item a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  transition:
+    background var(--transition),
+    padding var(--transition);
+}
+.categories-item a:hover {
+  background: var(--color-surface);
+  padding-inline: var(--space-4);
+}
+.categories-name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+.categories-desc {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.categories-count {
+  color: var(--color-accent-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* CONTACTO (CTA) */
+.cta {
+  padding: var(--space-7);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.cta-title {
+  font-size: var(--text-xl);
+}
+.cta-text {
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin: var(--space-2) 0 0;
+}

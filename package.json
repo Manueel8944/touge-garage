@@ -1,0 +1,11 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "php -S localhost:3000 -t public db/server.php",
+    "dev": "php -S localhost:3000 -t public db/server.php",
+    "open-l": "xdg-open http://localhost:3000/pages/index.html",
+    "open-w": "start http://localhost:3000/pages/index.html"
+  }
+}
